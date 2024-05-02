@@ -75,17 +75,17 @@ export default {
 @use "../style/partials/variables" as *;
 header {
     
-   margin-top:50px ;
+   
    display: flex;
    justify-content: center;
-   
+   height: 70px;
    .general-container {
         display: flex;
         justify-content: space-between;
-
+        
         .header-logo {
-         text-align: center;
-     
+        display: flex;
+        align-items: center;
          img {
              width: 40%;
          }

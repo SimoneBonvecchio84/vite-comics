@@ -14,7 +14,10 @@ export default {
     
     <main>
         <section class="goesHear-container">
-            <h3> --> Content goes here <-- </h3>
+            
+            <div class="cont">
+                <h3>  -->Content goes here<-- </h3>
+            </div>
 
         </section>
     </main>
@@ -24,6 +27,21 @@ export default {
 <style scoped lang="scss">
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
+ .goesHear-container {
+    background-color: $black-color;
+    height: 100px;
+    display: flex;
+    @include flex(row,center,center);
     
+    .cont{
+        width: 70%;
+        
+        h3 {
+            color: white;
+        }
+        
+    }
+ 
+}
 
 </style>
