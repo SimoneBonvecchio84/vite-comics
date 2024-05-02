@@ -3,7 +3,48 @@
 export default {
     data () {
         return {
-
+            menu: [
+                {
+                    title: "CHARACTERS",
+                    isActive: false
+                },
+                {
+                    title: "COMICS",
+                    isActive: true
+                },
+                {
+                    title: "MOVIE",
+                    isActive: false
+                },
+                {
+                    title: "TV",
+                    isActive: false
+                },
+                {
+                    title: "GAMES",
+                    isActive: false
+                },
+                {
+                    title: "COLLECTIBLES",
+                    isActive: false
+                },
+                {
+                    title: "VIDEOS",
+                    isActive: false
+                },
+                {
+                    title: "FANS",
+                    isActive: false
+                },
+                {
+                    title: "NEWS",
+                    isActive: false
+                },
+                {
+                    title: "SHOP",
+                    isActive: false
+                },
+            ]
         }
     }
 }
@@ -17,16 +58,10 @@ export default {
 
         <div class="header-nav">
             <ul class="navigation">
-                <li><a href="">CHARACTERS</a></li>
-                <li><a href="">COMICS</a></li>
-                <li><a href="">MOVIES</a></li>
-                <li><a href="">TV</a></li>
-                <li><a href="">GAMES</a></li>
-                <li><a href="">COLLECTIBLES</a></li>
-                <li><a href="">VIDEOS</a></li>
-                <li><a href="">FANS</a></li>
-                <li><a href="">NEWS</a></li>
-                <li><a href="">SHOP</a></li>
+                <li v-for="curNav in menu" >
+                    <a :class="{'active': curNav.isActive }" href=""> {{ curNav.title}} </a>
+                </li>
+                
             </ul>
         </div>
     </header>
@@ -40,7 +75,7 @@ header {
    display: flex;
 
    .header-logo {
-    width: 40%;
+    width: 30%;
     text-align: center;
 
     img {
@@ -56,10 +91,21 @@ header {
            gap: 1rem; 
                
            a {
+              padding: 10px ;
               text-decoration: none;
               font-size: .7rem;
               color: $text-nav-bar-color;
               cursor: pointer;
+
+              &:hover {
+                color: $primary-color;
+              };
+
+              &.active {
+                background-color: $primary-color;
+                color: white;
+                
+              }
            }
      }
    }
