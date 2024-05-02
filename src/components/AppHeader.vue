@@ -52,17 +52,20 @@ export default {
 
 <template>
     <header>
-        <div class="header-logo">
-            <img src="../assets/img/dc-logo.png" alt="logo della dc comics">
-        </div>
-
-        <div class="header-nav">
-            <ul class="navigation">
-                <li v-for="curNav in menu" >
-                    <a :class="{'active': curNav.isActive }" href=""> {{ curNav.title}} </a>
-                </li>
-                
-            </ul>
+        <div class="general-container">
+            
+            <div class="header-logo">
+                <img src="../assets/img/dc-logo.png" alt="logo della dc comics">
+            </div>
+    
+            <div class="header-nav">
+                <ul class="navigation">
+                    <li v-for="curNav in menu" >
+                        <a :class="{'active': curNav.isActive }" href=""> {{ curNav.title}} </a>
+                    </li>
+                    
+                </ul>
+            </div>
         </div>
     </header>
 </template>
@@ -71,44 +74,51 @@ export default {
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
 header {
+    
    margin-top:50px ;
    display: flex;
+   justify-content: center;
+   
+   .general-container {
+        display: flex;
+        justify-content: space-between;
 
-   .header-logo {
-    width: 30%;
-    text-align: center;
-
-    img {
-        width: 15%;
+        .header-logo {
+         text-align: center;
+     
+         img {
+             width: 40%;
+         }
+        }
+     
+        .header-nav {
+          display: flex;
+            .navigation {
+                @include flex(row,center,center);
+                list-style-type: none; 
+                gap: 1rem; 
+                    
+                a {
+                   padding: 10px ;
+                   text-decoration: none;
+                   font-size: .5rem;
+                   color: $text-nav-bar-color;
+                   cursor: pointer;
+     
+                   &:hover {
+                     color: $primary-color;
+                   };
+     
+                   &.active {
+                     background-color: $primary-color;
+                     color: white;
+                     
+                   }
+                }
+          }
+        }
     }
-   }
 
-   .header-nav {
-     display: flex;
-       .navigation {
-           @include flex(row,center,center);
-           list-style-type: none; 
-           gap: 1rem; 
-               
-           a {
-              padding: 10px ;
-              text-decoration: none;
-              font-size: .7rem;
-              color: $text-nav-bar-color;
-              cursor: pointer;
-
-              &:hover {
-                color: $primary-color;
-              };
-
-              &.active {
-                background-color: $primary-color;
-                color: white;
-                
-              }
-           }
-     }
-   }
 
 }
 
