@@ -10,7 +10,11 @@ export default {
 </script>
 
 <template>
-    <h2>HEADER</h2>
+    <header>
+        <div class="header-logo">
+            
+        </div>
+    </header>
 </template>
 
 <style scoped lang="scss">
