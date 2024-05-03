@@ -61,7 +61,7 @@ export default {
             <div class="header-nav">
                 <ul class="navigation">
                     <li v-for="curNav in menu" >
-                        <a :class="{'active': curNav.isActive }" href=""> {{ curNav.title}} </a>
+                        <a :class="{'active': curNav.isActive }" href=""> {{curNav.title}} </a>
                     </li>
                     
                 </ul>
@@ -75,7 +75,6 @@ export default {
 @use "../style/partials/variables" as *;
 header {
     
-   
    display: flex;
    justify-content: center;
    height: 70px;
@@ -87,7 +86,7 @@ header {
         display: flex;
         align-items: center;
          img {
-             width: 40%;
+             width: 50px;
          }
         }
      
@@ -97,7 +96,14 @@ header {
                 @include flex(row,center,center);
                 list-style-type: none; 
                 gap: 1rem; 
-                    
+                li {
+                    a {
+
+                        &:hover {
+                          color: $primary-color;
+                        };
+                    }
+                }    
                 a {
                    padding: 10px ;
                    text-decoration: none;
@@ -105,9 +111,6 @@ header {
                    color: $text-nav-bar-color;
                    cursor: pointer;
      
-                   &:hover {
-                     color: $primary-color;
-                   };
      
                    &.active {
                      background-color: $primary-color;
