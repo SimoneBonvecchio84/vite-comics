@@ -69,7 +69,7 @@ section {
     justify-content: space-between;
     
     .container-list {
-        width: 20%;
+        width: 30%;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
