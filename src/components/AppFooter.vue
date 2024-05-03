@@ -53,7 +53,7 @@ export default {
         .general-container {
             display: flex;
             justify-content: space-between;
-            padding: 2rem 0;
+            padding: 1rem 0;
 
             .container-btn{
                 border: solid 2px $primary-color;
