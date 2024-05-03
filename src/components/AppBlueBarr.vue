@@ -52,10 +52,9 @@ export default {
 @use "../style/partials/mixin" as *;
 section {
     background-color: $primary-color;
-    padding: 3rem 0;
+    padding: 2rem 0;
     color: white;
-
-
+   
     ul {
         list-style-type: none;
         display: flex;
