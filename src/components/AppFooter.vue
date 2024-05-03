@@ -26,7 +26,7 @@ export default {
         
         <div class="container-btn">
            
-            <button><a href="">SING-UP NOW!</a></button>
+            <a href="">SING-UP NOW!</a>
 
         </div>
 
@@ -48,7 +48,7 @@ export default {
 <style scoped lang="scss">
 @use "../style/partials/variables" as *;
     section{
-        background-color:rgb(48 48 48);
+        background-color:$footer-bg;
         
         .general-container {
             display: flex;
@@ -56,7 +56,15 @@ export default {
             padding: 2rem 0;
 
             .container-btn{
-                
+                border: solid 2px $primary-color;
+                color:$footer-bg ;
+                padding: .5rem;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: .7rem;
+                }
             }
 
             .container-link {
