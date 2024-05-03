@@ -66,7 +66,7 @@ section {
             align-items: center;
             gap: 1rem;
             img {
-                height: 50px;
+                height: 40px;
             }
 
             h4 {
