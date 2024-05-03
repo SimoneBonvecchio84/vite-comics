@@ -76,7 +76,7 @@ section {
         padding:  1rem 0;
         height: 250px;
         row-gap: 1rem;
-        column-gap: 1rem;
+        column-gap: 1.5rem;
        
         h4 {
             color: white;
@@ -88,7 +88,8 @@ section {
             a {
                 color:rgb(122, 119, 119) ;
                 text-decoration: none;
-                font-size: .7rem;
+                font-size: .6rem;
+                font-weight: 600;
             }
         }
     }
