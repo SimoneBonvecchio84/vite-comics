@@ -96,27 +96,30 @@ header {
                 @include flex(row,center,center);
                 list-style-type: none; 
                 gap: 1rem; 
+                ul {
+                    
+                }
+                
                 li {
                     a {
+                        &.active {
+                          border-bottom: 3px solid $primary-color;
+                          padding-bottom: 25px;
+                            
+                        }
 
-                        &:hover {
-                          color: $primary-color;
-                        };
+                        
                     }
                 }    
                 a {
                    padding: 10px ;
                    text-decoration: none;
                    font-size: .5rem;
+                   font-weight:600;
                    color: $text-nav-bar-color;
                    cursor: pointer;
      
      
-                   &.active {
-                     background-color: $primary-color;
-                     color: white;
-                     
-                   }
                 }
           }
         }
