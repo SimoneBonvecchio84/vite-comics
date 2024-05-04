@@ -93,19 +93,18 @@ export default {
             <div class="jumbotron-cont">
             </div>
             <div class="sectionCard">
+
                 <div class="general-container">
                     <div class="row">
                         <a href="">CURREN SERIES</a>
                         <div class="col" v-for="curCard in listCard">
-                            <AppCardDc :cardImage="curCard.thumb"
-                             :cardSeries="curCard.series"
-                            />
+                            <AppCardDc :cardImage="curCard.thumb" :cardSeries="curCard.series" />
                         </div>
                     </div>
+                    <a href="">LOAD MORE</a>
                 </div>
 
             </div>
-
 
 
         </section>
@@ -125,10 +124,13 @@ export default {
         background-size: cover;
         position: relative;
 
-        
+
     }
+
     .sectionCard {
+        padding: 2rem 0;
         background-color: black;
+
         .row {
             padding: 2rem 0;
             display: flex;
@@ -136,7 +138,7 @@ export default {
             flex-wrap: wrap;
             row-gap: 1rem;
             position: relative;
-            
+
             a {
                 text-decoration: none;
                 color: white;
@@ -145,14 +147,25 @@ export default {
                 font-size: .7rem;
                 font-weight: 700;
                 position: absolute;
-                left: -10px;
-                top: -15px
+                left: 0px;
+                top: -45px
             }
+
             .col {
                 width: calc(100% / 6);
                 
-           }
+            }
+
         }
+
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: $primary-color;
+            padding: .6rem 1.5rem;
+            
+        }
+
     }
 
 
