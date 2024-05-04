@@ -79,6 +79,9 @@ export default {
                 ul {
                     display: flex;
                     list-style-type: none;
+                    li {
+                        
+                    }
                     img {
                         width: 50%;
                     }

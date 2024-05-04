@@ -130,32 +130,35 @@ export default {
     .sectionCard {
         padding: 2rem 0;
         background-color: black;
+        .general-container {
+            text-align: center;
 
-        .row {
-            padding: 2rem 0;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            row-gap: 1rem;
-            position: relative;
-
-            a {
-                text-decoration: none;
-                color: white;
-                background-color: $primary-color;
-                padding: .6rem 1.5rem;
-                font-size: .7rem;
-                font-weight: 700;
-                position: absolute;
-                left: 0px;
-                top: -45px
+            .row {
+                padding: 2rem 0;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                row-gap: 1rem;
+                position: relative;
+    
+                a {
+                    text-decoration: none;
+                    color: white;
+                    background-color: $primary-color;
+                    padding: .6rem 1.5rem;
+                    font-size: .7rem;
+                    font-weight: 700;
+                    position: absolute;
+                    left: 0px;
+                    top: -45px
+                }
+    
+                .col {
+                    width: calc(100% / 6);
+                    
+                }
+    
             }
-
-            .col {
-                width: calc(100% / 6);
-                
-            }
-
         }
 
         a {
