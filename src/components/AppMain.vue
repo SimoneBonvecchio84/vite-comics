@@ -95,6 +95,7 @@ export default {
             <div class="sectionCard">
                 <div class="general-container">
                     <div class="row">
+                        <a href="">CURREN SERIES</a>
                         <div class="col" v-for="curCard in listCard">
                             <AppCardDc :cardImage="curCard.thumb"
                              :cardSeries="curCard.series"
@@ -122,10 +123,36 @@ export default {
         height: 300px;
         background-image: url(../assets/img/jumbotron.jpg);
         background-size: cover;
+        position: relative;
 
+        
     }
     .sectionCard {
-        
+        background-color: black;
+        .row {
+            padding: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 1rem;
+            position: relative;
+            
+            a {
+                text-decoration: none;
+                color: white;
+                background-color: $primary-color;
+                padding: .6rem 1.5rem;
+                font-size: .7rem;
+                font-weight: 700;
+                position: absolute;
+                left: -10px;
+                top: -15px
+            }
+            .col {
+                width: calc(100% / 6);
+                
+           }
+        }
     }
 
 

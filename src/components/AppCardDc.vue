@@ -16,5 +16,14 @@ export default {
 </template>
 
 <style scoped lang="scss">
+    img {
+       max-width: 100%;
+       height: 170px;
+    }
 
+    h4 {
+        color: white;
+        font-size: .7rem;
+        margin-top: .5rem;
+    }
 </style>
