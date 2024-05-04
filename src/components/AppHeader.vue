@@ -96,9 +96,7 @@ header {
                 @include flex(row,center,center);
                 list-style-type: none; 
                 gap: 1rem; 
-                ul {
-                    
-                }
+                
                 
                 li {
                     a {
@@ -119,8 +117,10 @@ header {
                    color: $text-nav-bar-color;
                    cursor: pointer;
      
-     
+                    
                 }
+
+                
           }
         }
     }

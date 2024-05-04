@@ -163,6 +163,8 @@ export default {
             color: white;
             background-color: $primary-color;
             padding: .6rem 1.5rem;
+            font-size: .7rem;
+            font-weight: 700;
             
         }
 
